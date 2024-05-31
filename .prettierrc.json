@@ -2,7 +2,7 @@
   "trailingComma": "es5",
   "semi": false,
   "tabWidth": 2,
-  "singleQuote": true,
+  "singleQuote": false,
   "arrowParens": "always",
   "vueIndentScriptAndStyle": true,
   "printWidth": 250,
