@@ -1,7 +1,7 @@
-'use client'
-import Link from 'next/link'
-import Logo from './Logo'
-import { usePathname } from 'next/navigation'
+"use client"
+import Link from "next/link"
+import Logo from "./Logo"
+import { usePathname } from "next/navigation"
 
 interface CustomLinkProps {
   href: string
@@ -9,16 +9,15 @@ interface CustomLinkProps {
   className: string
 }
 
-const CustomLink = ({ href, title, className = '' }: CustomLinkProps) => {
+const CustomLink = ({ href, title, className = "" }: CustomLinkProps) => {
   const pathname = usePathname()
-  console.log(pathname)
   return (
-    <Link href={href} className={`${className} group relative hover:text-pink-400 ${pathname === href ? 'text-pink-400' : 'text-white'}`}>
+    <Link href={href} className={`${className} group relative hover:text-pink-400 ${pathname === href ? "text-pink-400" : "text-white"}`}>
       {title}
 
       <span
         className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-pink-400 transition-[width] duration-300 group-hover:w-full group-hover:bg-pink-400
-      ${pathname === href ? 'w-full' : 'w-0'}`}
+      ${pathname === href ? "w-full" : "w-0"}`}
       >
         &nbsp;
       </span>
@@ -28,13 +27,13 @@ const CustomLink = ({ href, title, className = '' }: CustomLinkProps) => {
 
 const NavBar = () => {
   return (
-    <header className="flex w-full items-center justify-between px-32 py-4 font-medium">
+    <header className="flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-32 py-8 font-medium text-white backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:dark:bg-zinc-800/30">
       <Logo />
       <nav className="">
-        <CustomLink href="/" title="Home" className="ml-4" />
-        <CustomLink href="/about" title="About" className="ml-4" />
-        <CustomLink href="/tech-stack" title="Tech Stack" className="ml-4" />
-        <CustomLink href="/project" title="Project" className="mx-4" />
+        <CustomLink href="/" title="Home" className="ml-8" />
+        <CustomLink href="/about" title="About" className="ml-8" />
+        <CustomLink href="/tech-stack" title="Tech Stack" className="ml-8" />
+        <CustomLink href="/project" title="Project" className="mx-8" />
       </nav>
     </header>
   )
