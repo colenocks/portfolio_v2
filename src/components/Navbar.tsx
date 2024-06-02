@@ -12,11 +12,11 @@ interface CustomLinkProps {
 const CustomLink = ({ href, title, className = "" }: CustomLinkProps) => {
   const pathname = usePathname()
   return (
-    <Link href={href} className={`${className} group relative hover:text-pink-400 ${pathname === href ? "text-pink-400" : "text-white"}`}>
+    <Link href={href} className={`${className} group relative hover:text-white ${pathname === href ? "text-white" : "text-white"}`}>
       {title}
 
       <span
-        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-pink-400 transition-[width] duration-300 group-hover:w-full group-hover:bg-pink-400
+        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-white transition-[width] duration-300 group-hover:w-full group-hover:bg-white
       ${pathname === href ? "w-full" : "w-0"}`}
       >
         &nbsp;
