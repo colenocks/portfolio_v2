@@ -1,15 +1,15 @@
-import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next"
+import { Montserrat } from "next/font/google"
+import "./globals.css"
 
 const mont = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-mont',
+  subsets: ["latin"],
+  variable: "--font-mont",
 })
 
 export const metadata: Metadata = {
-  title: 'Coleman Enocks',
-  description: 'My portfolio, created using next by vercel',
+  title: "Coleman Enocks",
+  description: "My portfolio, created using next by vercel",
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mont.variable} font-mont bg-light min-h-screen w-full `}>{children}</body>
+      <body className={`${mont.variable} font-mont min-h-screen w-full bg-black `}>{children}</body>
     </html>
   )
 }
