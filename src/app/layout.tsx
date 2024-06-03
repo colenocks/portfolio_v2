@@ -8,7 +8,10 @@ const mont = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Coleman Enocks",
+  title: {
+    template: "%s | Coleman Enocks",
+    default: "Coleman Enocks",
+  },
   description: "My portfolio, created using next by vercel",
 }
 
