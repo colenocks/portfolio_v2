@@ -1,5 +1,6 @@
 import BaseLayout from "@/components/BaseLayout"
 import AnimatedText from "@/components/AnimatedText"
+import ButtonLink from "@/components/ButtonLink"
 import { ExternalLinkIcon } from "@/components/Icons"
 import Link from "next/link"
 
@@ -14,14 +15,9 @@ export default function Home() {
         </p>
 
         <div className="mt-2 flex items-center gap-4 self-start">
-          <Link
-            href="https://drive.google.com/file/d/146rG5DCqhHxyoR9-rXVntkcZbXU88WIN/view?usp=sharing"
-            target={"_blank"}
-            className="flex items-center justify-center rounded-lg border border-white bg-black p-2 px-5 text-base font-medium text-white transition-colors duration-300 hover:bg-pink-400 hover:text-white"
-            download={true}
-          >
+          <ButtonLink link="https://drive.google.com/file/d/146rG5DCqhHxyoR9-rXVntkcZbXU88WIN/view?usp=sharing" target={"_blank"} downloadable>
             Resume <ExternalLinkIcon className={"mb-0.5 ml-1 w-5"} />
-          </Link>
+          </ButtonLink>
           <Link href="mailto:enockscoleman@gmail.com" target={"_blank"} className={"font-medium capitalize text-white hover:underline"}>
             Contact me
           </Link>

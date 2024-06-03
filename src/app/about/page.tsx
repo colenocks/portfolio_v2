@@ -4,6 +4,7 @@ import Image from "next/image"
 import AnimatedText from "@/components/AnimatedText"
 import BaseLayout from "@/components/BaseLayout"
 import aboutMe from "/public/about-me.jpg"
+import WorkHistory from "@/components/WorkHistory"
 
 export const metadata: Metadata = {
   title: "About",
@@ -17,12 +18,12 @@ const about = () => {
   const paragraph3 = `When I'm not working, I play football on a semi-professional level - an exciting way to achieve the necessary balance. I am your friendly neighbourhood Programmer by Day and Footballer by night.`
 
   return (
-    <BaseLayout>
+    <BaseLayout className={"space-y-20"}>
       <div>
         <AnimatedText text="Drive, Dedication, Grace" />
         <div className={"flex items-center"}>
           <div className={"mt-4 w-1/2"}>
-            <h2 className={"text-xl font-bold"}>BIO</h2>
+            <h2 className={"mb-6 text-xl font-bold uppercase"}>BIO</h2>
             <div className={"flex flex-col gap-y-6"}>
               <p className={"font-medium"}>{paragraph1}</p>
               <p className={"font-medium"}>{paragraph2}</p>
@@ -36,6 +37,10 @@ const about = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <WorkHistory />
       </div>
     </BaseLayout>
   )
