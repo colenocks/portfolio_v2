@@ -10,13 +10,14 @@ type JobsProp = {
   period: string
   summary?: string
   readMore?: string
+  stack?: string
 }
 
 interface Props {
   className?: string
 }
 
-const JobDetails = ({ role, companyLink, company, period, address, summary, readMore }: JobsProp) => {
+const JobDetails = ({ role, companyLink, company, period, address, summary, readMore, stack }: JobsProp) => {
   return (
     <li className="mx-auto flex w-[80%] items-start justify-start border-l-4 border-white py-8 first:pt-0 last:pb-0">
       <figure className={"relative -left-10 stroke-black"}>
@@ -43,6 +44,11 @@ const JobDetails = ({ role, companyLink, company, period, address, summary, read
             Read More
           </ButtonLink>
         )}
+        {stack && (
+          <p className={"mt-4 font-bold"}>
+            Stack: <span className={"text-sm italic text-white/65"}>{stack}</span>
+          </p>
+        )}
       </div>
     </li>
   )
@@ -59,6 +65,7 @@ const WorkHistory = ({ className }: Props) => {
       address: "Munich, Germany (Remote)",
       summary: "Worked in a team responsible for creating a Data Product Management SaaS application called 'Delight'.",
       readMore: "https://www.mindfuel.ai/solution/delight",
+      stack: "Typescript, Vue 3, tRPC, TansStack VueQuery, TailwindCSS + PrimeVue UI, Node.js + Fastify.js, Auth0, Vee Validate + zod, PostgreSQL, Prisma ORM, GCP, Jest + Playwright.",
     },
     {
       id: "job-2",
@@ -69,6 +76,7 @@ const WorkHistory = ({ className }: Props) => {
       period: "March 2021 - November 2022",
       summary:
         "I worked in a team where we developed a resounding SaaS application that enables the company's framework of professional service consultancy and software solution, showcasing how clients can utilize the OKR methodology to achieve their organizational goals and ambition.",
+      stack: "Javascript, Vue 2 + Nuxt 2, Vee Validate, Node.js + Nest.js, Firebase, Jest + Cypress.",
     },
     {
       id: "job-3",
