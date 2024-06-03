@@ -1,5 +1,7 @@
 import React from "react"
 import { HeartIcon } from "./Icons"
+import Image from "next/image"
+import silhouette from "/public/silhouette.png"
 
 const Footer = ({ className = "" }) => {
   const year = new Date().getFullYear()
@@ -13,7 +15,10 @@ const Footer = ({ className = "" }) => {
         <span className={"px-1 text-pink-400 "}>
           <HeartIcon />
         </span>
-        by Cole
+        by Cole{" "}
+        <div className="ml-1.5 inline-block w-5 pt-1">
+          <Image src={silhouette} alt='Image by Mohamed Hassan from Pixabay - "https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3714836"' className={"h-auto w-full invert-0 dark:invert"} />
+        </div>
       </div>
     </footer>
   )
