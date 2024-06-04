@@ -9,6 +9,7 @@ type Props = {
   text?: string
   target?: "_self" | "_top" | "_parent" | "_blank"
   className?: string
+  rel?: string
 }
 
 const Button = ({ type = "primary", target = "_self", ...props }: Props) => {
@@ -21,6 +22,7 @@ const Button = ({ type = "primary", target = "_self", ...props }: Props) => {
       target={target}
       className={`flex items-center justify-center rounded-lg p-2 px-5 text-base font-medium transition-colors duration-300 ${type === "primary" ? primaryStyle : secondaryStyle} ${props.className}`}
       download={props.downloadable}
+      rel={props.rel}
     >
       {props.children || props.text}
     </Link>

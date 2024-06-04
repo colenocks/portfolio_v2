@@ -12,11 +12,11 @@ interface CustomLinkProps {
 const CustomLink = ({ href, title, className = "" }: CustomLinkProps) => {
   const pathname = usePathname()
   return (
-    <Link href={href} className={`${className} group relative hover:text-white ${pathname === href ? "text-white" : "text-white"}`}>
+    <Link href={href} className={`${className} group relative pb-0.5 hover:text-white ${pathname === href ? "text-white" : "text-white"}`}>
       {title}
 
       <span
-        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-white transition-[width] duration-300 group-hover:w-full group-hover:bg-white
+        className={`ease absolute bottom-0 left-0 inline-block h-[1px] bg-white transition-[width] duration-300 group-hover:w-full group-hover:bg-white
       ${pathname === href ? "w-full" : "w-0"}`}
       >
         &nbsp;
@@ -32,8 +32,8 @@ const NavBar = () => {
       <nav className="">
         <CustomLink href="/" title="Home" className="ml-8" />
         <CustomLink href="/about" title="About" className="ml-8" />
-        <CustomLink href="/tech-stack" title="Tech Stack" className="ml-8" />
-        <CustomLink href="/project" title="Project" className="mx-8" />
+        <CustomLink href="/projects" title="Projects" className="ml-8" />
+        <CustomLink href="/tech-stack" title="Tech Stack" className="mx-8" />
       </nav>
     </header>
   )
