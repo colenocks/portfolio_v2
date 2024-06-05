@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mont.variable} font-mont min-h-screen w-full bg-black `}>{children}</body>
+      <body className={`${mont.variable} min-h-screen w-full bg-black font-mont text-white`}>{children}</body>
     </html>
   )
 }
