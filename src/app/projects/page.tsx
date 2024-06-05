@@ -74,7 +74,7 @@ const Projects = (props: Props) => {
       stack: "HTML5, CSS, JavaScript, Node, Express",
       image: hoop,
       imageAlt: "basket with net for basketball",
-      link: "https://github.com/colenocks/hoops'",
+      link: "https://github.com/colenocks/hoops",
     },
     {
       id: "cyob",
@@ -92,7 +92,7 @@ const Projects = (props: Props) => {
       stack: "Next.js, Typescript.",
       image: portfolioHomePage,
       imageAlt: "portfolio home page",
-      link: "https://github.com/colenocks/portfolio_2",
+      link: "https://github.com/colenocks/portfolio_v2",
     },
     {
       id: "snakerace",
