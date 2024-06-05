@@ -34,15 +34,13 @@ const ProjectItem = ({ name, image, link, description, stack, imageAlt }: Projec
   const bottomBorderAnimationClass =
     "after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:scale-0 after:rounded-bl-lg after:rounded-br-lg after:bg-white after:transition-all after:duration-300 after:ease-out after:content-[''] hover:after:scale-100"
   return (
-    <article
-      className={`group relative z-10 flex flex-col items-center rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 ${bottomBorderAnimationClass}`}
-    >
-      <div className={"h-[160px] w-[280px] border border-gray-300 lg:mr-auto dark:border-neutral-800"}>
+    <article className={`group relative z-10 flex flex-col items-center rounded-lg border border-transparent px-5 py-4 text-white transition-colors hover:border-neutral-700 hover:bg-neutral-800/30 ${bottomBorderAnimationClass}`}>
+      <div className={"h-[160px] w-[280px] border border-neutral-800 lg:mr-auto"}>
         <Image className={"h-full w-full"} src={image} alt={imageAlt} />
       </div>
-      <h2 className="my-3 w-full text-center font-semibold capitalize lg:text-left">{name}</h2>
+      <h2 className="my-3 w-full text-center font-semibold capitalize text-white/80 lg:text-left">{name}</h2>
       <div className={"mb-6 flex w-full flex-col items-center lg:items-start"}>
-        <p className="line-clamp-3 max-w-[30ch] text-ellipsis text-balance text-sm opacity-50">{description}</p>
+        <p className="line-clamp-3 max-w-[30ch] text-ellipsis text-balance text-sm text-white">{description}</p>
         <p className={"mt-2 max-w-[30ch] text-balance font-bold"}>
           Stack: <span className={"text-sm italic text-white/65"}>{stack}</span>
         </p>

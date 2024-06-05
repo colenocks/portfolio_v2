@@ -28,7 +28,7 @@ const JobDetails = ({ role, companyLink, company, period, address, summary, read
         </svg>
       </figure>
 
-      <div className={"w-full self-start"}>
+      <div className={"w-full self-start text-white"}>
         <h3 className={"text-2xl font-bold capitalize"}>
           {role}&nbsp;
           <a className={"text-primary capitalize"} href={companyLink} target={"_blank"}>

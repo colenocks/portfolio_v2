@@ -27,7 +27,7 @@ const CustomLink = ({ href, title, className = "" }: CustomLinkProps) => {
 
 const NavBar = () => {
   return (
-    <header className="flex w-full flex-col items-center justify-center gap-6 border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-10 font-medium text-white backdrop-blur-2xl lg:flex-row lg:justify-between lg:gap-5 lg:px-32 lg:py-8  dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:dark:bg-zinc-800/30">
+    <header className="flex w-full flex-col items-center justify-center gap-6 border-b border-neutral-800  bg-zinc-800/30 from-inherit  p-10 font-medium text-white backdrop-blur-2xl lg:flex-row lg:justify-between lg:gap-5 lg:px-32 lg:py-8 ">
       <Logo />
       <nav className="">
         <CustomLink href="/about" title="About" className="ml-8" />
