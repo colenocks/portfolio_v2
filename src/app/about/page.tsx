@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import AnimatedText from "@/components/AnimatedText"
 import BaseLayout from "@/components/BaseLayout"
-import aboutMe from "/public/about-me.jpg"
+import aboutMe from "/public/about-me.png"
 import WorkHistory from "@/components/WorkHistory"
 
 export const metadata: Metadata = {

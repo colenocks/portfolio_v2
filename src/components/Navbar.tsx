@@ -30,10 +30,10 @@ const NavBar = () => {
     <header className="flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-32 py-8 font-medium text-white backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:dark:bg-zinc-800/30">
       <Logo />
       <nav className="">
-        <CustomLink href="/" title="Home" className="ml-8" />
         <CustomLink href="/about" title="About" className="ml-8" />
         <CustomLink href="/projects" title="Projects" className="ml-8" />
-        <CustomLink href="/tech-stack" title="Tech Stack" className="mx-8" />
+        <CustomLink href="/experience" title="Exp." className="ml-8" />
+        <CustomLink href="/contact" title="Contact" className="mx-8" />
       </nav>
     </header>
   )

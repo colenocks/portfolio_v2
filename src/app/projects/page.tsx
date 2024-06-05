@@ -34,7 +34,7 @@ const ProjectItem = ({ name, image, link, description, stack, imageAlt }: Projec
   const borderLineStyle =
     "after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:scale-0 after:rounded-bl-lg after:rounded-br-lg after:bg-white after:transition-all after:duration-300 after:ease-out after:content-[''] hover:after:scale-100"
   return (
-    <div
+    <article
       className={`group relative z-10 flex flex-col items-center rounded-lg border border-transparent px-5 py-4 transition-colors  hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 ${borderLineStyle}`}
     >
       <div className={"h-[160px] w-[280px]"}>
@@ -52,7 +52,7 @@ const ProjectItem = ({ name, image, link, description, stack, imageAlt }: Projec
           Explore <ArrowBigRightIcon className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none" size={20} />
         </div>
       </ButtonLink>
-    </div>
+    </article>
   )
 }
 
@@ -117,6 +117,9 @@ const Projects = (props: Props) => {
   return (
     <BaseLayout>
       <AnimatedText text="Effort precedes talent." className="mb-12 text-center" />
+      <p className="mb-8 w-[70%] text-base font-medium text-white">
+        At the moment, I have quite a <span className={"underline"}>light</span> catalog of projects you can explore, but there are more exciting ones in the works. 🏗️
+      </p>
       <div className="grid gap-4 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left">
         {projectList.map((project) => {
           return <ProjectItem {...project} key={project.id} />

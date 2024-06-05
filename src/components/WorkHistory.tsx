@@ -91,14 +91,11 @@ const WorkHistory = ({ className }: Props) => {
 
   return (
     <div className={`relative flex flex-col items-end ${className}`}>
-      <div className="relative h-full w-[60%]">
-        <h2 className={"mb-6 w-full text-xl font-bold uppercase"}>Experience</h2>
-        <ul className={"item-between flex w-full flex-col"}>
-          {jobList.map((job) => (
-            <JobDetails key={job.id} {...job} />
-          ))}
-        </ul>
-      </div>
+      <ul className={"item-between flex h-full flex-col"}>
+        {jobList.map((job) => (
+          <JobDetails key={job.id} {...job} />
+        ))}
+      </ul>
     </div>
   )
 }
