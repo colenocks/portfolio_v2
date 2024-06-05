@@ -29,14 +29,14 @@ const Experience = (props: Props) => {
 
   return (
     <BaseLayout>
-      <AnimatedText className={"mb-8 text-center"} text={"Experience."} />
-      <div className={"flex w-[80%] items-start gap-3"}>
+      <AnimatedText className={"mb-8 text-center"} text={"Experience, Expertise."} />
+      <div className={"mb-10 flex w-full flex-col-reverse items-start gap-3 lg:mb-0 lg:flex-row xl:w-[70%]"}>
         <div className={"mt-20"}>
-          <h2 className={"mb-6 flex items-center gap-x-3 text-2xl font-medium"}>
+          <h2 className={"mb-6 flex items-center justify-center gap-x-3 text-2xl font-medium"}>
             <CodeIcon className={"text-pink-400"} size={48} />
             Tech Stack
           </h2>
-          <div className={"flex flex-wrap items-center gap-3 text-center"}>
+          <div className={"flex flex-wrap items-center justify-center gap-3 text-center"}>
             {skills.map((skill, index: number) => {
               return (
                 <motion.span

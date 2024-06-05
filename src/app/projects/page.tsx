@@ -31,27 +31,29 @@ type ProjectType = {
 }
 
 const ProjectItem = ({ name, image, link, description, stack, imageAlt }: ProjectType) => {
-  const borderLineStyle =
+  const bottomBorderAnimationClass =
     "after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:scale-0 after:rounded-bl-lg after:rounded-br-lg after:bg-white after:transition-all after:duration-300 after:ease-out after:content-[''] hover:after:scale-100"
   return (
     <article
-      className={`group relative z-10 flex flex-col items-center rounded-lg border border-transparent px-5 py-4 transition-colors  hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 ${borderLineStyle}`}
+      className={`group relative z-10 flex flex-col items-center rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 ${bottomBorderAnimationClass}`}
     >
-      <div className={"h-[160px] w-[280px]"}>
+      <div className={"h-[160px] w-[280px] border border-gray-300 lg:mr-auto dark:border-neutral-800"}>
         <Image className={"h-full w-full"} src={image} alt={imageAlt} />
       </div>
-      <h2 className="my-3 w-full font-semibold capitalize lg:text-left">{name}</h2>
-      <div className={"mb-3 max-w-[30ch]"}>
-        <p className="text-balance text-sm opacity-50">{description}</p>
-        <p className={"mt-2 font-bold"}>
+      <h2 className="my-3 w-full text-center font-semibold capitalize lg:text-left">{name}</h2>
+      <div className={"mb-6 flex w-full flex-col items-center lg:items-start"}>
+        <p className="line-clamp-3 max-w-[30ch] text-ellipsis text-balance text-sm opacity-50">{description}</p>
+        <p className={"mt-2 max-w-[30ch] text-balance font-bold"}>
           Stack: <span className={"text-sm italic text-white/65"}>{stack}</span>
         </p>
       </div>
-      <ButtonLink link={link} className="mb-4 mt-auto w-fit items-center gap-1 text-base font-semibold transition-all duration-150 ease-linear hover:px-6 lg:text-left" target="_blank" rel="noopener noreferrer">
-        <div>
-          Explore <ArrowBigRightIcon className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none" size={20} />
-        </div>
-      </ButtonLink>
+      <div className={"mb-4 mt-auto flex justify-center lg:w-full lg:justify-start"}>
+        <ButtonLink link={link} className="w-fit items-center gap-1 text-base font-semibold transition-all duration-150 ease-linear hover:px-6 lg:text-left" target="_blank" rel="noopener noreferrer">
+          <div>
+            Explore <ArrowBigRightIcon className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none" size={20} />
+          </div>
+        </ButtonLink>
+      </div>
     </article>
   )
 }
@@ -62,19 +64,10 @@ const Projects = (props: Props) => {
       id: "delight",
       name: "Delight",
       description: "I contributed in a team of brilliant minds to build a Data Product Management SaaS application.",
-      stack: "Vue, Typescript, TailwindCSS + PrimeVue, Fastify, PostgreSQL.",
+      stack: "Vue, Typescript, TailwindCSS, PrimeVue, Fastify, PostgreSQL.",
       image: delight,
       imageAlt: "The details page of a data product in a SaaS application by www.mindfuel.ai called 'Delight'.",
       link: "https://mindfuel.ai/solution/delight",
-    },
-    {
-      id: "personal-portfolio",
-      name: "Portfolio",
-      description: "A personal portfolio built using Next.js",
-      stack: "React, Next.js, Typescript",
-      image: portfolioHomePage,
-      imageAlt: "portfolio home page",
-      link: "https://github.com/colenocks/portfolio_2",
     },
     {
       id: "hoops",
@@ -88,11 +81,20 @@ const Projects = (props: Props) => {
     {
       id: "cyob",
       name: "Cycle of benefits",
-      description: "A waste management crowdsourcing platform of environmentally related projects publicly available for interested persons to work on and gain rewards.",
+      description: "A waste management crowdsourcing platform of environment based projects publicly available for interested persons to work on and gain rewards.",
       stack: "HTML, CSS, JavaScript, Node, Express, Amazon RDS, Amazon EC2, SQL",
       image: cyob,
       imageAlt: "Tictactoe image",
       link: "https://github.com/colenocks/cycle_of_benefits",
+    },
+    {
+      id: "personal-portfolio",
+      name: "Portfolio",
+      description: "A personal portfolio built using Next.js",
+      stack: "Next.js, Typescript.",
+      image: portfolioHomePage,
+      imageAlt: "portfolio home page",
+      link: "https://github.com/colenocks/portfolio_2",
     },
     {
       id: "snakerace",
@@ -116,11 +118,9 @@ const Projects = (props: Props) => {
 
   return (
     <BaseLayout>
-      <AnimatedText text="Effort precedes talent." className="mb-12 text-center" />
-      <p className="mb-8 w-[70%] text-base font-medium text-white">
-        At the moment, I have quite a <span className={"underline"}>light</span> catalog of projects you can explore, but there are more exciting ones in the works. 🏗️
-      </p>
-      <div className="grid gap-4 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left">
+      <AnimatedText text="Effort beats talent." className="text-center" />
+      <p className="my-8 w-2/3 text-center text-base font-medium text-white lg:w-[80%]">You can explore some of the projects I&#39;ve worked on. There are more in the works 🏗️</p>
+      <div className="grid gap-4 text-center lg:w-[80%] lg:max-w-5xl lg:grid-cols-2 lg:text-left xl:w-full xl:grid-cols-3">
         {projectList.map((project) => {
           return <ProjectItem {...project} key={project.id} />
         })}

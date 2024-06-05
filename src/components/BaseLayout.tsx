@@ -12,7 +12,7 @@ const BaseLayout = ({
   return (
     <main className={"relative min-h-screen pb-16"}>
       <NavBar />
-      <div className={`min-h-screen-minus-header-footer flex flex-col items-center justify-between px-32 py-24 ${className}`}>{children}</div>
+      <div className={`min-h-screen-minus-header-footer flex flex-col items-center justify-between p-10 lg:px-32 lg:py-24 ${className}`}>{children}</div>
       <Footer className={"absolute bottom-0"} />
     </main>
   )
