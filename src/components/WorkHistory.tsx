@@ -19,7 +19,7 @@ interface Props {
 
 const JobDetails = ({ role, companyLink, company, period, address, summary, readMore, stack }: JobsProp) => {
   return (
-    <li className="mx-auto flex w-[80%] items-start justify-start border-l-4 border-white py-8 first:pt-0 last:pb-0">
+    <li className="mx-auto flex w-[70%] items-start justify-start border-l-4 border-white py-8 first:pt-0 last:pb-0 lg:w-full">
       <figure className={"relative -left-10 stroke-black"}>
         <svg className={"-rotate-90"} width="75" height="75" viewBox="0 0 100 100">
           <circle cx="75" cy="50" r="20" className={"fill-none stroke-pink-400 stroke-1"} />
@@ -90,7 +90,7 @@ const WorkHistory = ({ className }: Props) => {
   ]
 
   return (
-    <div className={`relative flex flex-col items-end ${className}`}>
+    <div className={`relative flex flex-col items-center lg:items-end ${className}`}>
       <ul className={"item-between flex h-full flex-col"}>
         {jobList.map((job) => (
           <JobDetails key={job.id} {...job} />
