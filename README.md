@@ -1,5 +1,7 @@
 This portfolio website is built with [Next.js](https://nextjs.org/) and bootstrapped using [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/81367cf5-9105-4682-9516-60436ae7c5f3/deploy-status)](https://app.netlify.com/sites/colenocks/deploys)
+
 ## Getting Started
 
 First, install dependencies:
@@ -22,5 +24,8 @@ Link: [Portfolio 2.0 with Next.js](https://www.colenocks.com)
 
 ## Useful Tools
 
-- Icons: [Tabler Icons](https://tabler.io/icons)
-- Animation: [Framer Motion](https://www.framer.com/motion/)
+Icons: [Tabler Icons](https://tabler.io/icons)
+
+Animation: [Framer Motion](https://www.framer.com/motion/)
+
+Currently deployed on [Netlify](https://www.netlify.com/)
