@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Coleman Enocks",
     default: "Coleman Enocks",
   },
-  description: "My portfolio, created using next by vercel",
+  description: "Software Engineer | Fullstack Developer",
 }
 
 export default function RootLayout({
