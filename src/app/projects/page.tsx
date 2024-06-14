@@ -97,8 +97,8 @@ const Projects = (props: Props) => {
     {
       id: "cyob",
       name: "Cycle of benefits",
-      description: "A waste management crowdsourcing platform of environment based projects publicly available for interested persons to work on and gain rewards.",
-      stack: "HTML, CSS, JavaScript, Node, Express, Amazon RDS, Amazon EC2, SQL",
+      description: "Prototype of a waste management crowdsourcing platform where environmental projects are made publicly available for anyone to work on and get rewards.",
+      stack: "React, Node, Express, MongoDB, Heroku",
       image: cyob,
       imageAlt: "recycle image",
       link: "https://github.com/colenocks/cycle_of_benefits",
