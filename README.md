@@ -29,3 +29,5 @@ Icons: [Tabler Icons](https://tabler.io/icons)
 Animation: [Framer Motion](https://www.framer.com/motion/)
 
 Currently deployed on [Netlify](https://www.netlify.com/)
+
+Credits to [Codebucks](https://github.com/codebucks27)
