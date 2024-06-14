@@ -40,7 +40,7 @@ const about = () => {
             <div className={"my-6 flex items-center justify-center gap-x-4 font-medium lg:justify-start "}>
               <div className="flex items-center gap-x-4">
                 <Link href={"https://linkedin.com/in/coleman-enocks"}>
-                  <BrandLinkedinIcon className="scale:100 cursor-pointer transition-all ease-linear hover:scale-125 hover:text-pink-400" size={36} stroke={1.5} />
+                  <BrandLinkedinIcon className="scale:100 cursor-pointer transition-all ease-linear hover:scale-125 hover:text-pink-400" size={32} stroke={1.5} />
                 </Link>
                 <Link href={"https://github.com/colenocks"}>
                   <BrandGithubIcon className="scale:100 cursor-pointer transition-all ease-linear hover:scale-125 hover:text-pink-400" size={28} />

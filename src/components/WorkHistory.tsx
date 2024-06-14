@@ -19,8 +19,8 @@ interface Props {
 
 const JobDetails = ({ role, companyLink, company, period, address, summary, readMore, stack }: JobsProp) => {
   return (
-    <li className="mx-auto flex w-[70%] items-start justify-start border-l-4 border-white py-8 first:pt-0 last:pb-0 lg:w-full">
-      <figure className={"relative -left-10 stroke-black"}>
+    <li className="mx-auto flex w-[70%] items-start justify-start border-white py-8 first:pt-0 last:pb-0 md:border-l-4 lg:w-full">
+      <figure className={"relative -left-10 hidden stroke-black md:block"}>
         <svg className={"-rotate-90"} width="75" height="75" viewBox="0 0 100 100">
           <circle cx="75" cy="50" r="20" className={"fill-none stroke-pink-400 stroke-1"} />
           <circle cx="75" cy="50" r="20" className={"fill-white stroke-[5px]"} />
@@ -39,15 +39,15 @@ const JobDetails = ({ role, companyLink, company, period, address, summary, read
           {period} | {address}
         </span>
         <p className={"w-full font-medium"}>{summary}</p>
-        {readMore && (
-          <ButtonLink link={readMore} target={"_blank"} className={"mt-2 w-fit"}>
-            Read More
-          </ButtonLink>
-        )}
         {stack && (
           <p className={"mt-4 font-bold"}>
             Stack: <span className={"text-sm italic text-white/65"}>{stack}</span>
           </p>
+        )}
+        {readMore && (
+          <ButtonLink link={readMore} target={"_blank"} className={"mx-auto mt-2 w-fit md:mx-0"}>
+            Read More
+          </ButtonLink>
         )}
       </div>
     </li>
@@ -63,7 +63,7 @@ const WorkHistory = ({ className }: Props) => {
       companyLink: "www.mindfuel.ai",
       period: "November 2022 - Present",
       address: "Munich, Germany (Remote)",
-      summary: "Worked in a team responsible for creating a Data Product Management SaaS application called 'Delight'.",
+      summary: "We created a Data Product Management SaaS solution called 'Delight'.",
       readMore: "https://www.mindfuel.ai/solution/delight",
       stack: "Typescript, Vue 3, tRPC, TansStack VueQuery, TailwindCSS + PrimeVue UI, Node.js + Fastify.js, Auth0, Vee Validate + zod, PostgreSQL, Prisma ORM, GCP, Jest + Playwright.",
     },
@@ -75,7 +75,7 @@ const WorkHistory = ({ className }: Props) => {
       address: "Munich, Germany (Remote)",
       period: "March 2021 - November 2022",
       summary:
-        "I worked in a team where we developed a resounding SaaS application that enables the company's framework of professional service consultancy and software solution, showcasing how clients can utilize the OKR methodology to achieve their organizational goals and ambition.",
+        "We developed a resounding SaaS application that enables the company's framework of professional service consultancy and software solution, showcasing how clients can utilize the OKR methodology to achieve their organizational goals and ambition.",
       stack: "Javascript, Vue 2 + Nuxt 2, Vee Validate, Node.js + Nest.js, Firebase, Jest + Cypress.",
     },
     {
@@ -85,7 +85,7 @@ const WorkHistory = ({ className }: Props) => {
       companyLink: "www.mindfuel.ai",
       address: "UK (Remote)",
       period: "July 2020 - March 2021",
-      summary: "At Concentrix, we enabled a customer technical support for our client - British Telecom (BT), where I talked customers through series of steps to resolve the technical issues with their BT devices.",
+      summary: "At Concentrix, we enabled a customer facing technical support system for our client - British Telecom (BT), where customers who have technical issues with their BT devices are guided through series of possible resolutions.",
     },
   ]
 

@@ -23,13 +23,12 @@ const Experience = (props: Props) => {
     { title: "PostgreSQL", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535180/dev_images/portfolio/MySQL_aakjrs.png" },
     { title: "Firebase", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535189/dev_images/portfolio/firebase_jo0tbe.png" },
     { title: "GCP" },
-    { title: "..." },
   ]
 
   return (
     <BaseLayout>
       <AnimatedText className={"mb-8 text-center"} text={"Experience, Expertise."} />
-      <div className={"mb-10 flex w-full flex-col-reverse items-start gap-3 lg:mb-0  lg:flex-row xl:w-[80%]"}>
+      <div className={"mb-10 flex w-full flex-col-reverse items-start gap-3 lg:mb-0 lg:flex-row xl:w-[80%]"}>
         <div className={"mt-20"}>
           <h2 className={"mb-6 flex items-center justify-center gap-x-3 text-2xl font-medium"}>
             <CodeIcon className={"text-pink-400"} size={48} />
@@ -51,7 +50,7 @@ const Experience = (props: Props) => {
             })}
           </div>
         </div>
-        <WorkHistory />
+        <WorkHistory className={"ml-0 lg:ml-5"} />
       </div>
     </BaseLayout>
   )
