@@ -20,7 +20,7 @@ const eachWord = {
 const AnimatedText = (props: Props) => {
   return (
     <div className="mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-center">
-      <motion.h1 className={`inline-block w-full text-left text-6xl font-medium capitalize text-white ${props.className}`} variants={quote} initial="initial" animate="animate">
+      <motion.h1 className={`inline-block w-full text-left text-5xl font-medium capitalize text-white transition-all sm:text-6xl ${props.className}`} variants={quote} initial="initial" animate="animate">
         {props.text.split(" ").map((word, index) => (
           <motion.span key={word + "-" + index} className="inline-block" variants={eachWord}>
             {word}&nbsp;

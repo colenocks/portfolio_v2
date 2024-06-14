@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import ButtonLink from "@/components/ButtonLink"
+import Link from "next/link"
 
 type JobsProp = {
   role: string
@@ -19,7 +20,7 @@ interface Props {
 
 const JobDetails = ({ role, companyLink, company, period, address, summary, readMore, stack }: JobsProp) => {
   return (
-    <li className="mx-auto flex w-[70%] items-start justify-start border-white py-8 first:pt-0 last:pb-0 md:border-l-4 lg:w-full">
+    <li className="mx-auto flex w-full items-start justify-start border-white py-8 first:pt-0 last:pb-0 sm:w-[80%] lg:w-full lg:border-l-4">
       <figure className={"relative -left-10 hidden stroke-black md:block"}>
         <svg className={"-rotate-90"} width="75" height="75" viewBox="0 0 100 100">
           <circle cx="75" cy="50" r="20" className={"fill-none stroke-pink-400 stroke-1"} />
@@ -29,15 +30,13 @@ const JobDetails = ({ role, companyLink, company, period, address, summary, read
       </figure>
 
       <div className={"w-full self-start text-white"}>
-        <h3 className={"text-2xl font-bold capitalize"}>
-          {role}&nbsp;
-          <a className={"text-primary capitalize"} href={companyLink} target={"_blank"}>
-            -&nbsp;{company}
-          </a>
-        </h3>
-        <span className={"font-medium capitalize text-white/65"}>
+        <h3 className={"text-xl font-bold capitalize"}>{role}</h3>
+        <Link className={"text-primary text-xl font-semibold capitalize hover:underline"} href={companyLink ?? ""} target={"_blank"}>
+          {company}
+        </Link>
+        <p className={"font-medium capitalize text-white/65"}>
           {period} | {address}
-        </span>
+        </p>
         <p className={"w-full font-medium"}>{summary}</p>
         {stack && (
           <p className={"mt-4 font-bold"}>
@@ -60,18 +59,18 @@ const WorkHistory = ({ className }: Props) => {
       id: "job-1",
       role: "Software Engineer",
       company: "Mindfuel",
-      companyLink: "www.mindfuel.ai",
+      companyLink: "https://mindfuel.ai",
       period: "November 2022 - Present",
       address: "Munich, Germany (Remote)",
       summary: "We created a Data Product Management SaaS solution called 'Delight'.",
-      readMore: "https://www.mindfuel.ai/solution/delight",
+      readMore: "https://mindfuel.ai/solution/delight",
       stack: "Typescript, Vue 3, tRPC, TansStack VueQuery, TailwindCSS + PrimeVue UI, Node.js + Fastify.js, Auth0, Vee Validate + zod, PostgreSQL, Prisma ORM, GCP, Jest + Playwright.",
     },
     {
       id: "job-2",
-      role: "Junior Fulllstack Developer",
+      role: "Junior Fullstack Developer",
       company: "Mindfuel",
-      companyLink: "www.mindfuel.ai",
+      companyLink: "https://mindfuel.ai",
       address: "Munich, Germany (Remote)",
       period: "March 2021 - November 2022",
       summary:
@@ -82,7 +81,7 @@ const WorkHistory = ({ className }: Props) => {
       id: "job-3",
       role: "Technical Support Advisor",
       company: "Concentrix(CVGs) - BT",
-      companyLink: "www.mindfuel.ai",
+      companyLink: "https://concentrix.com",
       address: "UK (Remote)",
       period: "July 2020 - March 2021",
       summary: "At Concentrix, we enabled a customer facing technical support system for our client - British Telecom (BT), where customers who have technical issues with their BT devices are guided through series of possible resolutions.",
