@@ -4,6 +4,7 @@ import portfolio from "/public/portfolio.png"
 import tictactoe from "/public/tictactoe.jpg"
 import snakerace from "/public/snakerace.jpg"
 import delight from "/public/mindfuel-delight.png"
+import dcireland from "/public/dc-ireland.png"
 
 const db = {
   projects: [
@@ -67,6 +68,16 @@ const db = {
     //   order: 7,
     //   link: "https://github.com/colenocks/Simple_TicTacToe_Game",
     // },
+    {
+      id: "dc-ireland",
+      name: "Dominion City Ireland",
+      description: "Dominion City Ireland's official website. A bible believing church in Ireland with a mandate to raise leaders that transforms society.",
+      stack: "Next JS (Typescript), Firebase",
+      image: dcireland,
+      imageAlt: "DC Ireland homepage",
+      order: 3,
+      link: "https://github.com/colenocks/dc-ireland",
+    },
   ],
 }
 
