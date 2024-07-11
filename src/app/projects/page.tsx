@@ -5,14 +5,9 @@ import Image from "next/image"
 import BaseLayout from "@/components/BaseLayout"
 import { ArrowBigRightIcon } from "@/components/Icons"
 import AnimatedText from "@/components/AnimatedText"
-
-import hoop from "/public/basketball-hoop.jpg"
-import cyob from "/public/cyob.jpg"
-import portfolioHomePage from "/public/portfolio.png"
-import tictactoeImage from "/public/tictactoe.jpg"
-import snakerace from "/public/snakerace.jpg"
-import delight from "/public/mindfuel-delight.png"
 import ButtonLink from "@/components/ButtonLink"
+
+import db from "@/data/index"
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -35,8 +30,8 @@ const ProjectItem = ({ name, image, link, description, stack, imageAlt }: Projec
     "after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:scale-0 after:rounded-bl-lg after:rounded-br-lg after:bg-white after:transition-all after:duration-300 after:ease-out after:content-[''] hover:after:scale-100"
   return (
     <article className={`group relative z-10 flex flex-col items-center rounded-lg border border-transparent px-5 py-4 text-white transition-colors hover:border-neutral-700 hover:bg-neutral-800/30 ${bottomBorderAnimationClass}`}>
-      <div className={"h-[160px] w-[280px] border border-neutral-800 lg:mr-auto"}>
-        <Image className={"h-full w-full"} src={image} alt={imageAlt} />
+      <div className={"relative h-[160px] w-[280px] border border-neutral-800 lg:mr-auto"}>
+        <Image className={"h-full w-full"} src={image} alt={imageAlt} fill={true} />
       </div>
       <h2 className="my-3 w-full text-center font-semibold capitalize text-white/80 lg:text-left">{name}</h2>
       <div className={"mb-6 flex w-full flex-col items-center lg:items-start"}>
@@ -57,69 +52,15 @@ const ProjectItem = ({ name, image, link, description, stack, imageAlt }: Projec
 }
 
 const Projects = (props: Props) => {
-  const projectList = [
-    {
-      id: "delight",
-      name: "Delight",
-      description: "Together with a team of brilliant minds at Mindfuel, we built a Data Product Management SaaS application.",
-      stack: "Vue, Typescript, TailwindCSS, PrimeVue, Fastify, PostgreSQL.",
-      image: delight,
-      imageAlt: "The details page of a data product in a SaaS application by www.mindfuel.ai called 'Delight'.",
-      link: "https://mindfuel.ai/solution/delight",
-    },
-    {
-      id: "personal-portfolio",
-      name: "Portfolio",
-      description: "A personal portfolio built using Next.js",
-      stack: "Next.js, React, Typescript.",
-      image: portfolioHomePage,
-      imageAlt: "portfolio home page",
-      link: "https://github.com/colenocks/portfolio_v2",
-    },
-    {
-      id: "snakerace",
-      name: "Snakerace",
-      description: "A real time multiplayer version of the classic snake game using socket.io.",
-      stack: "HTML, CSS, JavaScript, Node JS, Express",
-      image: snakerace,
-      imageAlt: "Snakerace image",
-      link: "https://github.com/colenocks/Multiplayer_Snake_Game_EIS",
-    },
-    // {
-    //   id: "hoops",
-    //   name: "Hoops",
-    //   description: "This HTML5 canvas based basketball-like game was developed as a little tribute to the Basketball legend, Kobe Bryant as well as his daughter and all who lost their lives on the 26th of january 2020.",
-    //   stack: "HTML5, CSS, JavaScript, Node, Express",
-    //   image: hoop,
-    //   imageAlt: "basket with net for basketball",
-    //   link: "https://github.com/colenocks/hoops",
-    // },
-    {
-      id: "cyob",
-      name: "Cycle of benefits",
-      description: "Prototype of a waste management crowdsourcing platform where environmental projects are made publicly available for anyone to work on and get rewards.",
-      stack: "React, Node, Express, MongoDB, Heroku",
-      image: cyob,
-      imageAlt: "recycle image",
-      link: "https://github.com/colenocks/cycle_of_benefits",
-    },
-    // {
-    //   id: "tictactoe",
-    //   name: "Tic-Tac-Toe",
-    //   description: "A Simple jQuery based game.",
-    //   stack: "HTML, CSS, JQuery, Express.js",
-    //   image: tictactoeImage,
-    //   imageAlt: "Tictactoe image",
-    //   link: "https://github.com/colenocks/Simple_TicTacToe_Game",
-    // },
-  ]
+  const projectList = db.projects
+  const sortedProjectList = projectList.sort((a, b) => a.order - b.order)
 
   return (
     <BaseLayout>
       <AnimatedText text="Effort beats talent." className="text-center" />
       <p className="my-8 w-2/3 text-center text-base font-medium text-white lg:w-[80%]">You can explore some of the projects I&#39;ve worked on. There are more in the works 🏗️</p>
       <div className="grid gap-4 text-center lg:w-[80%] lg:max-w-5xl lg:grid-cols-2 lg:text-left xl:w-full xl:grid-cols-3">
-        {projectList.map((project) => {
+        {sortedProjectList.map((project) => {
           return <ProjectItem {...project} key={project.id} />
         })}
       </div>
