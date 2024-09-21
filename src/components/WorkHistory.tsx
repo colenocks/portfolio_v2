@@ -60,7 +60,7 @@ const WorkHistory = ({ className }: Props) => {
       role: "Software Engineer",
       company: "Mindfuel",
       companyLink: "https://mindfuel.ai",
-      period: "November 2022 - Present",
+      period: "November 2022 - July 2024",
       address: "Munich, Germany (Remote)",
       summary: "We created a Data Product Management SaaS solution called 'Delight'.",
       readMore: "https://mindfuel.ai/solution/delight",
