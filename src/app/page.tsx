@@ -16,7 +16,7 @@ export default function Home() {
         </div>
 
         <div className="mt-2 flex flex-col items-center justify-center gap-4 self-start lg:flex-row lg:justify-start">
-          <ButtonLink link="https://drive.google.com/file/d/11Y15PI_DRih2bvYptZ-LXCkf_hQHVMUA/view?usp=sharing" target={"_blank"} downloadable>
+          <ButtonLink link="https://drive.google.com/file/d/1c5-DnXtahHxl5AqEyyRzu_eM65KDy0dK/view?usp=sharing" target={"_blank"} downloadable>
             My Resume <ExternalLinkIcon className={"mb-0.5 ml-1 w-5"} />
           </ButtonLink>
           <Link href="/contact" className={"font-medium capitalize text-white hover:underline"}>

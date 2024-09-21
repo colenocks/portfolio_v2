@@ -19,11 +19,11 @@ const Experience = (props: Props) => {
     { title: "Vue", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535190/dev_images/portfolio/vue_uma9h7.png" },
     { title: "React", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535183/dev_images/portfolio/React_kikqlk.png" },
     { title: "Node.js", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535182/dev_images/portfolio/Node-JS_uqghrz.png" },
-    { title: "PHP", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535182/dev_images/portfolio/php_ek3vh23y03vbcvpssp7l" },
-    { title: "Git", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535174/dev_images/portfolio/Git_sxyjcp.png" },
-    { title: "PostgreSQL", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535180/dev_images/portfolio/MySQL_aakjrs.png" },
+    { title: "Java", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535176/dev_images/portfolio/Java_nekk2j.png" },
     { title: "Firebase", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535189/dev_images/portfolio/firebase_jo0tbe.png" },
-    { title: "GCP" },
+    { title: "MySQL", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535180/dev_images/portfolio/MySQL_aakjrs.png" },
+    { title: "Git", logo: "https://res.cloudinary.com/colenocks/image/upload/v1717535174/dev_images/portfolio/Git_sxyjcp.png" },
+    { title: "Google Cloud Platform" },
   ]
 
   return (
