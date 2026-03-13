@@ -1,7 +1,7 @@
 import React from "react"
 import { HeartIcon } from "./Icons"
 import Image from "next/image"
-import silhouette from "/public/silhouette.png"
+import silhouette from "@/../public/silhouette.png"
 
 const Footer = ({ className = "" }) => {
   const year = new Date().getFullYear()

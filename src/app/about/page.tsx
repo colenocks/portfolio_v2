@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import AnimatedText from "@/components/AnimatedText"
 import BaseLayout from "@/components/BaseLayout"
-import aboutMe from "/public/about-me.png"
+import aboutMe from "@/../public/about-me.png"
 import { BrandXIcon, BrandGithubIcon, BrandLinkedinIcon } from "@/components/Icons"
 import Link from "next/link"
 

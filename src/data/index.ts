@@ -1,10 +1,10 @@
-import cyob from "/public/cyob.jpg"
-import portfolio from "/public/portfolio.png"
-import tictactoe from "/public/tictactoe.jpg"
-import snakerace from "/public/snakerace.jpg"
-import delight from "/public/mindfuel-delight.png"
-import dcireland from "/public/dc-ireland.png"
-import geotend from "/public/geotend.png"
+import cyob from "@/../public/cyob.jpg"
+import portfolio from "@/../public/portfolio.png"
+import tictactoe from "@/../public/tictactoe.jpg"
+import snakerace from "@/../public/snakerace.jpg"
+import delight from "@/../public/mindfuel-delight.png"
+import dcireland from "@/../public/dc-ireland.png"
+import geotend from "@/../public/geotend.png"
 
 const db = {
   projects: [
