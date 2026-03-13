@@ -1,13 +1,24 @@
-import hoop from "/public/basketball-hoop.jpg"
 import cyob from "/public/cyob.jpg"
 import portfolio from "/public/portfolio.png"
 import tictactoe from "/public/tictactoe.jpg"
 import snakerace from "/public/snakerace.jpg"
 import delight from "/public/mindfuel-delight.png"
 import dcireland from "/public/dc-ireland.png"
+import geotend from "/public/geotend.png"
 
 const db = {
   projects: [
+    {
+      id: "geotend",
+      name: "Geotend",
+      description:
+        "Geotend is an attendance management system for football clubs with event scheduling, GPS-based check-ins, automated fines, and detailed attendance history, built in collaboration with an AI coding assistant.",
+      stack: "Mobile app (iOS), React Native, TypeScript, AI-assisted development",
+      image: geotend,
+      imageAlt: "Screens showing Geotend football club attendance management app.",
+      order: 0,
+      link: "https://apps.apple.com/ie/app/geotend/id6758687552",
+    },
     {
       id: "delight",
       name: "Delight",
